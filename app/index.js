@@ -67,8 +67,8 @@ module.exports = generators.Base.extend({
 
     copyFiles.forEach(function(file) {
       this.fs.copy(
-        this.templatePath(file),
-        this.destinationPath(file)
+        this.templatePath(file.src),
+        this.destinationPath(file.dst)
       )
     }, this)
 
