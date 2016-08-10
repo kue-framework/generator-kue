@@ -1,0 +1,24 @@
+{
+  "name": "generator-kue",
+  "version": "1.0.0",
+  "description": "Yeoman generator for the Kue web framework. Kue is an opinionated, yet adaptable, Kotlin friendly web framework.",
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "kotlin",
+    "gradle",
+    "web",
+    "rest"
+  ],
+  "author": "Michael Vaughan",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^0.24.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kue-framework/kue"
+  }
+}

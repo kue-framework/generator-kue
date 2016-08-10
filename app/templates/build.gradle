@@ -1,0 +1,49 @@
+group '<%= gradleGroup %>'
+version '<%= gradleVersion %>'
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.3"
+        classpath "gradle.plugin.org.kt3k:ebean-enhance-plugin:2.0.5"
+        classpath "com.h2database:h2:1.4.191"
+        classpath "gradle.plugin.com.kue:kue-gradle-plugin:1.0.3"
+        classpath "gradle.plugin.com.boxfuse.client:flyway-release:4.0.3"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'kotlin'
+apply plugin: 'com.github.kt3k.ebean.enhance'
+apply plugin: 'org.flywaydb.flyway'
+apply plugin: 'com.kue'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:1.0.3"
+    compile "com.kue:kue-jackson:1.0.0"
+    compile "com.kue:kue-ebean:1.0.0"
+    compile "com.kue:kue-core:1.0.0"
+    compile "com.kue:kue-bonecp:1.0.0"
+    compile "com.h2database:h2:1.4.191"
+    testCompile "junit:junit:4.11"
+}
+
+ebeanEnhance {
+    packages = '<%= basePackage %>.models.db.**'
+}
+
+flyway {
+    url = "jdbc:h2:file:./default"
+    user = "sa"
+    password = ""
+}
