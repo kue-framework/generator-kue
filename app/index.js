@@ -50,7 +50,7 @@ module.exports = generators.Base.extend({
     ]
 
     var copyFiles = [
-      {src: 'gradlew', dst: 'gradlew'}
+      {src: 'gradlew', dst: 'gradlew'},
       {src:'gradlew.bat', dst: 'gradlew.bat'},
       {src: 'gradle', dst: 'gradle'},
       {src: 'src/main/resources/db/migration/V1__create_widget_table.sql', dst: 'src/main/resources/db/migration/V1__create_widget_table.sql'},
