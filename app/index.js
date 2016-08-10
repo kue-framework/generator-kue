@@ -50,11 +50,12 @@ module.exports = generators.Base.extend({
     ]
 
     var copyFiles = [
-      'gradlew',
-      'gradlew.bat',
-      'gradle',
-      'src/main/resources/db/migration/V1__create_widget_table.sql',
-      '.gitignore']
+      {src: 'gradlew', dst: 'gradlew'}
+      {src:'gradlew.bat', dst: 'gradlew.bat'},
+      {src: 'gradle', dst: 'gradle'},
+      {src: 'src/main/resources/db/migration/V1__create_widget_table.sql', dst: 'src/main/resources/db/migration/V1__create_widget_table.sql'},
+      {src: 'gitignore', dst: '.gitignore'}
+    ]
 
     copyTplFiles.forEach(function(file){
       this.fs.copyTpl(
