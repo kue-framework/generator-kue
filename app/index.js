@@ -54,6 +54,7 @@ module.exports = generators.Base.extend({
       {src:'gradlew.bat', dst: 'gradlew.bat'},
       {src: 'gradle', dst: 'gradle'},
       {src: 'src/main/resources/db/migration/V1__create_widget_table.sql', dst: 'src/main/resources/db/migration/V1__create_widget_table.sql'},
+      {src: 'src/main/resources/logback.xml', dst: 'src/main/resources/logback.xml'},
       {src: 'gitignore', dst: '.gitignore'}
     ]
 

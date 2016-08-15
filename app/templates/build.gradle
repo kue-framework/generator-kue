@@ -32,9 +32,10 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:1.0.3"
     compile "com.kue:kue-jackson:1.0.0"
     compile "com.kue:kue-ebean:1.0.0"
-    compile "com.kue:kue-core:1.0.0"
+    compile "com.kue:kue-core:1.0.1"
     compile "com.kue:kue-bonecp:1.0.0"
     compile "com.h2database:h2:1.4.191"
+    compile "ch.qos.logback:logback-classic:1.1.7"
     testCompile "junit:junit:4.11"
 }
 
