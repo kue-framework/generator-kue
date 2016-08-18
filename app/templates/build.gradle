@@ -12,7 +12,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.3"
         classpath "gradle.plugin.org.kt3k:ebean-enhance-plugin:2.0.5"
         classpath "com.h2database:h2:1.4.191"
-        classpath "gradle.plugin.com.kue:kue-gradle-plugin:1.0.5"
+        classpath "gradle.plugin.com.kue:kue-gradle-plugin:1.0.6"
         classpath "gradle.plugin.com.boxfuse.client:flyway-release:4.0.3"
     }
 }
